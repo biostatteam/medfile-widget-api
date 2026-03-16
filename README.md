@@ -6,8 +6,8 @@ Kontakt: integracja@medfile.pl
 
 ## Spis treści
 
-1. [Wprowadzenie i przypadki użycia](./Wprowadzenie)
+1. [Wprowadzenie i przypadki użycia](./Wprowadzenie.md)
 2. Rejestracja wizyt
-   1. [Rejestrowanie wizyt przez REST API](./Rejestrowanie-wizyt-przez-api)
-   2. [Uruchomienie formularza rejestracji Medfile](./Formularz-rejestracji-medfile)
-3. [FAQ](./FAQ)
+   1. [Rejestrowanie wizyt przez REST API](./Rejestrowanie-wizyt-przez-api.md)
+   2. [Uruchomienie formularza rejestracji Medfile](./Formularz-rejestracji-medfile.md)
+3. [FAQ](./FAQ.md)

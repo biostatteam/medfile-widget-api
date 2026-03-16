@@ -14,7 +14,7 @@ Testowanie API możliwe jest przez 90 dni za darmo.
 
 ## Nie chcę używać formularza Medfile do umawiania wizyt pacjentów, jakie są inne możliwości?
 
-Jeżeli chcą Państwo samodzielnie zapisać pacjenta do kalendarza proszę skorzystać z dokumentacji: [Rejestrowanie wizyt przez REST API](./Rejestrowanie-wizyt-przez-api)
+Jeżeli chcą Państwo samodzielnie zapisać pacjenta do kalendarza proszę skorzystać z dokumentacji: [Rejestrowanie wizyt przez REST API](./Rejestrowanie-wizyt-przez-api.md)
 
 ## Chcę nie tylko umówić wizytę, ale też mieć możliwość przeniesienia lub anulowania wizyty pacjenta.
 
