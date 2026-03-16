@@ -4,19 +4,10 @@ Wersja: 1.1
 
 Kontakt: integracja@medfile.pl
 
-## Wstęp
+## Spis treści
 
-Dla klientów budujących własny interfejs do rejestracji pacjentów stworzyliśmy dedykowany interejs REST API o nazwie Medfile Widget API tzw. API do rejestracji online. Usługa umożliwia wyszukanie m.in. specjalisty, usługi oraz terminu. Następnie dedykowany endpoint umożliwia finalizację rejestracji bez wychodzenia z Państwa aplikacji.
-
-## Podstawowe informacje
-
-- Adres API: https://wapi.medfile.pl 
-- Interaktywna dokumentacja: https://wapi.medfile.pl/docs 
-- Testowy token: **DemoToken**
-
-## Przypadki użycia
-
-- Gdy klient chciałby pokazać na swojej stronie listę specjalistów którzy pracują w jego placówce i wolne terminy.
-- Gdy klient chciałby zaprojektować swój własny widżet wyszukiwania lekarza i wolnego terminu.
-- Gdy klient chciałby zbudować swojego ChatBota lub asystenta AI i potrzebuje informacji o lekarzach i terminach.
-- Gdy klient chciałby w jednym API mieć informacje o lekarzach i terminach z wielu różnych kont w aplikacji Medfile.
+1. [Wprowadzenie i przypadki użycia](./Wprowadzenie)
+2. Rejestracja wizyt
+   1. [Rejestrowanie wizyt przez REST API](./Rejestrowanie-wizyt-przez-api)
+   2. [Uruchomienie formularza rejestracji Medfile](./Formularz-rejestracji-medfile)
+3. [FAQ](./FAQ)
