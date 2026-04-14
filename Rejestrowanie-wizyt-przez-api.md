@@ -24,7 +24,10 @@ Content-Type: application/x-www-form-urlencoded
 | phone_direction | string | Numer kierunkowy kraju dla telefonu pacjenta np. +48 |
 | patient_name | string | Imię pacjenta |
 | patient_lastname | string | Nazwisko pacjenta |
-| patient_pesel | string | PESEL pacjenta – wymagany tylko jeżeli tak zdefiniowano w ustawieniach systemu rejestracji online |
+| patient_pesel | string | PESEL pacjenta – wymagany tylko jeżeli tak zdefiniowano w ustawieniach systemu rejestracji online. Alternatywnie można użyć zestawu `document_country` + `document_type` + `document_value` (patrz sekcja poniżej). |
+| document_country | string | Nazwa kraju wydania dokumentu np. „Polska", „Niemcy". Używany razem z `document_type` i `document_value` jako alternatywa dla `patient_pesel`. |
+| document_type | integer | Typ dokumentu tożsamości. Używany razem z `document_country` i `document_value`. Możliwe wartości: `1` – Identyfikator krajowy (PESEL dla Polski), `2` – Dowód osobisty, `3` – Prawo jazdy, `4` – Paszport, `5` – Książeczka żeglarska, `8` – Numer TZTC (Tymczasowe Zaświadczenie Tożsamości Cudzoziemca). |
+| document_value | string | Numer/wartość dokumentu tożsamości np. numer PESEL, numer paszportu. Używany razem z `document_country` i `document_type`. |
 | patient_zip | string | Adres pacjenta – Kod pocztowy – wymagany tylko jeżeli tak zdefiniowano w ustawieniach systemu rejestracji online |
 | patient_city | string | Adres pacjenta – Miasto – wymagany tylko jeżeli tak zdefiniowano w ustawieniach systemu rejestracji online |
 | patient_street | string | Adres pacjenta – Ulica – wymagany tylko jeżeli tak zdefiniowano w ustawieniach systemu rejestracji online |
@@ -36,6 +39,51 @@ Content-Type: application/x-www-form-urlencoded
 | patient_language | string | Kod domyślnego języka pacjenta – pl, en, ua itd. \- opcjonalne |
 | referer | string | Adres z którego pacjent trafił do formularza rezerwacji – do analityki – opcjonalny |
 | allow_payment | string | Przyjmuje wartość różną od pustej np. „1”, „true”. Oznacza, że system powinien utworzyć link do płatności, jeżeli usługa w wizycie tego wymaga i zwrócić go jako paymentUrl. |
+
+## Alternatywna identyfikacja pacjenta (OID)
+
+Zamiast parametru `patient_pesel` można użyć zestawu trzech parametrów: `document_country`, `document_type` i `document_value`. Jest to przydatne w przypadku pacjentów zagranicznych lub gdy identyfikacja odbywa się na podstawie innego dokumentu niż PESEL.
+
+### Typy dokumentów (`document_type`)
+
+| Wartość | Nazwa |
+| :---- | :---- |
+| 1 | Identyfikator krajowy (PESEL dla Polski) |
+| 2 | Dowód osobisty |
+| 3 | Prawo jazdy |
+| 4 | Paszport |
+| 5 | Książeczka żeglarska |
+| 8 | Numer TZTC (Tymczasowe Zaświadczenie Tożsamości Cudzoziemca) |
+
+### Przykłady
+
+**Identyfikator krajowy (PESEL) — odpowiednik `patient_pesel`:**
+
+```
+document_country=Polska
+document_type=1
+document_value=90040892123
+```
+
+**Paszport zagraniczny:**
+
+```
+document_country=Niemcy
+document_type=4
+document_value=AB1234567
+```
+
+**Paszport polski:**
+
+```
+document_country=Polska
+document_type=4
+document_value=AB1234567
+```
+
+> **Uwaga:** Parametry `document_country`, `document_type` i `document_value` muszą być przekazane łącznie — podanie tylko jednego lub dwóch z nich jest niewystarczające. Nie należy łączyć ich z parametrem `patient_pesel`.
+
+Pełna lista krajów wraz z dostępnymi dla nich typami dokumentów znajduje się w [Słowniku krajów i typów dokumentów](Slownik-krajow-i-typow-dokumentow.md).
 
 ## Uwaga
 
