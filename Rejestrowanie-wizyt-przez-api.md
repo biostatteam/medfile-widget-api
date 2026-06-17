@@ -39,6 +39,7 @@ Content-Type: application/x-www-form-urlencoded
 | patient_language | string | Kod domyślnego języka pacjenta – pl, en, ua itd. \- opcjonalne |
 | referer | string | Adres z którego pacjent trafił do formularza rezerwacji – do analityki – opcjonalny |
 | allow_payment | string | Przyjmuje wartość różną od pustej np. „1”, „true”. Oznacza, że system powinien utworzyć link do płatności, jeżeli usługa w wizycie tego wymaga i zwrócić go jako paymentUrl. |
+| patient_birthdate | string | (opcjonalne) Data urodzenia pacjenta w formacie YYYY-MM-DD |
 
 ## Alternatywna identyfikacja pacjenta (OID)
 
