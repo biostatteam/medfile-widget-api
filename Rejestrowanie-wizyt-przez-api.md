@@ -147,7 +147,7 @@ W przypadku powodzenia:
       "description": "Opis formularza",
       "url": "https://{link do formularza medsign}",
       "completed": false,
-      "expires_at": "2026-06-06 06:00:00,
+      "expires_at": "2026-06-06 06:00:00",
     }
   }
 }
