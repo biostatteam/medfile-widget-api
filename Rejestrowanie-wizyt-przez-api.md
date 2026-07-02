@@ -141,6 +141,13 @@ W przypadku powodzenia:
       "remote": 1,
       "patient": "Jan Kowalski",
       "uuid": "ab1b6a03-fcff-bdcc-521e-6ea003e9ac57"
+    },
+    "forms": {
+      "title" => "Formularz Medsign 1",
+      "description" => "Opis formularza",
+      "url" => "https://{link do formularza medsign}",
+      "completed" => false,
+      "expires_at" => "2026-06-06 06:00:00,
     }
   }
 }
